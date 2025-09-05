@@ -1,0 +1,23 @@
+.action-area-block {
+  .action-area-card {
+    &:nth-child(1) {
+      @apply text-white;
+      .action-area-overlay {
+        position: absolute;
+        background: hsla(237, 26%, 15%, 0.9);
+        inset: 0;
+        z-index: 5;
+      }
+    }
+
+    &:nth-child(2) {
+      @apply text-n-60;
+      .action-area-overlay {
+        position: absolute;
+        background: hsl(41, 90%, 55%, 0.9);
+        inset: 0;
+        z-index: 5;
+      }
+    }
+  }
+}

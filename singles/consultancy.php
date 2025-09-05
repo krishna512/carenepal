@@ -1,0 +1,1 @@
+<?php include(locate_template('singles/vacancy.php', false, false)); ?>

@@ -1,0 +1,135 @@
+.filter-block {
+  // @include mq('lg', min) {
+  //   flex: 1 12rem;
+  //   margin: 0 1rem;
+  // lg:flex-1
+  // }
+  @apply max-lg:w-full;
+
+  input {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1c1d30;
+    padding: 8px;
+    width: 100%;
+    border-bottom: 1px solid #1c1d30;
+    background: transparent;
+  }
+
+  .select2.select2-container {
+    @include mq('lg', min) {
+      width: 16rem !important;
+    }
+  }
+
+  .select2-container--default .select2-selection--single {
+    width: 100%;
+    background: transparent;
+    padding: 8px 0;
+    height: auto;
+    color: #1c1d30 !important;
+    font-size: 1.25rem;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 1px solid #1c1d30;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 0.25rem;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-radius: 1px 0;
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.2s ease;
+    transition-duration: 0.3s;
+  }
+  .select2.select2-container.select2-container--default.select2-container--below.select2-container--open .select2-selection__arrow {
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    display: none;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: transparent;
+  color: #e36f1e;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background: transparent;
+}
+
+.filter-search-btn {
+  @apply cursor-pointer border border-o-40 px-4 py-2.5 hover:bg-o-40 max-lg:w-full;
+  transition: all 0.2s ease-in-out;
+
+  input {
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.filter-reset-btn {
+  @apply cursor-pointer border border-o-40 bg-o-40 px-4 py-2.5 hover:border-n-70 hover:bg-n-70 hover:text-n-0 max-lg:w-full;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-content select {
+  width: 100%;
+  background: transparent;
+  padding: 10px 0;
+  color: #1c1d30;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 1px solid #1c1d30;
+}
+.crisis-wrap {
+  border-radius: 24px 0 0 24px;
+}
+// Crisis Respond styling
+.crisis-btn {
+  transform: translateX(75%);
+  transition: all 0.4s ease;
+  svg {
+    transform: rotate(-360deg);
+    transition: all 0.9s ease;
+  }
+
+  &.slideInRight-open {
+    transform: translateX(0);
+
+    svg {
+      transform: rotate(360deg);
+      transition: all 0.9s ease;
+    }
+  }
+}
+.crisis-btn-icon {
+  // position: absolute;
+  // right: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 50%;
+
+  svg {
+    font-size: 24px;
+    color: #fff;
+  }
+}
+
+.crisis-content {
+  padding: 10px 10px 10px 0;
+}

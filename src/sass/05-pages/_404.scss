@@ -1,0 +1,17 @@
+.error-details {
+  svg {
+    height: 1em;
+  }
+}
+
+.error404 main {
+  @apply bg-g-30;
+}
+
+.back-links a {
+  text-decoration: underline !important;
+  @apply transition-all duration-300;
+  &:hover {
+    @apply text-o-40;
+  }
+}

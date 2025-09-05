@@ -1,0 +1,140 @@
+.paragraph-image-block {
+  padding-block: 3rem;
+  @media (max-width: 960px) {
+    @apply container py-8;
+  }
+  .paragraph-image-block-image {
+    @media (min-width: 960px) {
+      flex: 0 65%;
+      position: relative;
+    }
+    flex: 0 100%;
+  }
+
+  @media (min-width: 960px) {
+    &.style1 .paragraph-image-block-image {
+      margin-right: -15%;
+    }
+  }
+
+  //   second block
+  &.style2 {
+    background: var(--n-10);
+    flex-direction: row-reverse;
+
+    @media (min-width: 960px) {
+      .paragraph-image-block-image {
+        margin-left: -15%;
+      }
+    }
+    .paragraph-image-block-info {
+      background: var(--n-60);
+      color: #fff;
+    }
+  }
+  //////
+
+  img {
+    aspect-ratio: 1.77778;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .paragraph-image-block-info {
+    padding: 2rem;
+    flex: 0 100%;
+    position: relative;
+    z-index: 5;
+    background: var(--n-10);
+    border-bottom: 8px solid var(--o-40);
+
+    @media (min-width: 960px) {
+      border-bottom: 0;
+      flex: 0 50%;
+      padding: 4rem;
+    }
+  }
+
+  .paragraph-image-block-content {
+    @media (min-width: 960px) {
+      border-left: 8px solid #e36f1e;
+      padding-left: 2rem;
+    }
+
+    p:nth-child(3) {
+      // font-family: 'Merriweather', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    ul,
+    ol,
+    li {
+      font-size: 1rem;
+      line-height: 1.8;
+      // list-style: inherit;
+    }
+  }
+
+  .learn-more-btn {
+    border: 5px solid var(--o-40);
+    &:hover {
+      color: #fff;
+
+      svg {
+        color: #fff;
+      }
+    }
+    svg {
+      font-size: 18px;
+      color: #e36f1e;
+    }
+  }
+}
+
+// paragraph second block //
+.paragraph-block {
+  @apply container py-12;
+
+  &.style3 {
+    @apply md:flex-row-reverse;
+  }
+
+  .paragraph-block-content {
+    p,
+    div:not(:first-child) {
+      font-family: 'Merriweather', sans-serif;
+
+      font-size: 1rem;
+      line-height: 1.7em;
+
+      &:not(:last-of-type) {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  .paragraph-block-title {
+    &:after {
+      content: ' ';
+      height: 3px;
+      width: 40px;
+      background-color: #e36f1e;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .paragraph-block-image {
+    img {
+      aspect-ratio: 1.77778;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(121, 121, 121, 0.7);
+    }
+  }
+}

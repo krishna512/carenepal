@@ -1,0 +1,93 @@
+// .team_category {
+//   ul li {
+//     cursor: pointer;
+
+//     &:hover,
+//     &.active {
+//       @apply text-o-50;
+//       transition: all 0.2s ease-in-out;
+//     }
+//   }
+// }
+
+.team-data {
+  .team-card:hover {
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
+    // transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+.team-card {
+  .team-social-icon {
+    // &:hover svg {
+    //   transition: all 0.2s ease;
+    //   transform: scale(1.1);
+    // }
+    svg {
+      font-size: 20px;
+    }
+  }
+}
+// .article {
+//   flex: 0 66.66%;
+//   max-width: 66.66%;
+// }
+
+// Team Details Page
+
+.team-bios {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  .hero {
+    margin-bottom: 1rem;
+  }
+  .article {
+    flex: 0 66.66%;
+    max-width: 66.66%;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  .sidebar {
+    flex: 0 25.333%;
+    max-width: 25.33%;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    .share-link-btn .addtoany_shortcode .addtoany_list.a2a_kit_size_32 a:not(.addtoany_special_service) > span {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.see-team-wrap {
+  @media screen and (min-width: 768px) {
+    flex: 0 25.333%;
+    max-width: 25.33%;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+}
+
+.learn-more-btn:hover {
+  span {
+    animation: 1.5s infinite ease cursor-move;
+  }
+}

@@ -1,0 +1,209 @@
+.main-header {
+  background: linear-gradient(180deg, #1e1e1e 0%, rgba(30, 30, 30, 0) 100%);
+  transition: all 0.2s ease;
+  @apply fixed left-0 right-0  z-[10000] w-full;
+
+  // vacancy Header color
+  &.no-banner {
+    background: #1c1d30;
+  }
+}
+
+// Header color change
+.main-header.scrolled {
+  background: #fff;
+  box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.12);
+
+  ul.wp-block-navigation__container {
+    color: var(--n-60);
+  }
+  .safe-svg-cover svg {
+    color: var(--n-60);
+  }
+
+  .main-navigation-items {
+    .wp-block-site-logo.is-default-size img {
+      width: 120px;
+    }
+  }
+}
+
+.main-header.is-hidden {
+  transform: translateY(-100%);
+}
+
+// End of Header Sticky //
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover {
+  text-decoration: none;
+}
+
+// .main-navigation {
+//   background: transparent;
+
+.main-navigation-items {
+  gap: 0;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  transition: all 0.4s ease;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem !important;
+  @include mq('sm', max) {
+    padding-top: 1rem;
+    padding-bottom: 1rem !important;
+  }
+
+  .wp-block-site-logo.is-default-size img {
+    transition: all 0.4s ease;
+    width: 132px;
+  }
+
+  nav.wp-block-navigation {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  ul.wp-block-navigation__container {
+    color: #fff;
+    @include mq('md', min) {
+      gap: 0;
+
+      & > li.wp-block-navigation-item {
+        padding: 0.625rem 0.75rem;
+
+        & > a {
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        button.wp-block-navigation__submenu-icon > svg {
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+          color: var(--o-40);
+          transition: all 0.2s ease-in-out;
+
+          & > button.wp-block-navigation__submenu-icon > svg {
+            transform: rotate(180deg);
+            color: var(--o-40);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+      &:focus > a.wp-block-navigation-item__content,
+      &:hover > a.wp-block-navigation-item__content {
+        color: var(--o-40);
+        transition: all 0.2s ease-in-out;
+      }
+
+      & > a.wp-block-navigation-item__content {
+        &:hover {
+          box-shadow: inset 0 -2px 0 0 #e36f1e;
+          transition: all 0.2s ease-in-out;
+          color: var(--o-40);
+        }
+      }
+    }
+
+    ul.wp-block-navigation__submenu-container .wp-block-navigation-item:hover > a {
+      color: var(--o-40);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .has-child .wp-block-navigation__submenu-container {
+    @include mq('sm', min) {
+      left: -2px !important;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+      top: 100%;
+      transition: all 0.5s ease-in-out;
+
+      // sub -nav-child
+      li.wp-block-navigation-item.has-child ul.wp-block-navigation__submenu-container {
+        left: 100% !important;
+
+        .wp-block-navigation-item:hover > a {
+          color: var(--o-40);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  // .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+  //   background: #e36f1e;
+  // }
+
+  // open search icon
+  .safe-svg-cover {
+    display: inline-flex;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  form.wp-block-search {
+    box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    display: none;
+    transition: all 0.6s ease;
+
+    @media (min-width: 960px) {
+      width: 50%;
+    }
+
+    &.show {
+      opacity: 1;
+      display: block;
+      position: absolute;
+      animation: fadeIn 1s ease-in-out;
+      transition: all 0.6s ease;
+      right: -40px;
+      top: 155%;
+    }
+
+    .wp-block-search__inside-wrapper {
+      position: relative;
+      padding: 0;
+
+      input.wp-block-search__input {
+        position: relative;
+        border-radius: 4px;
+        padding: 8px 16px;
+        border: 1px solid #f9f6f4;
+      }
+
+      .wp-block-search__button.has-icon {
+        @media (min-width: 960px) {
+          display: none;
+        }
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        border-radius: 0px 4px 4px 0px;
+        padding: 8px 16px;
+        right: 0;
+        bottom: 0;
+        top: 0;
+
+        &:hover,
+        &:active {
+          background: var(--n-10);
+
+          svg {
+            color: var(--n-70);
+          }
+        }
+      }
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  // end search icon
+}

@@ -1,0 +1,34 @@
+.static-page-header {
+  .feature-image {
+    @apply relative pt-[40%] md:pt-[30%];
+
+    img {
+      @apply absolute left-0 top-0 h-full w-full object-cover;
+      object-position: top;
+    }
+  }
+
+  .static-header {
+    @apply relative z-10 max-w-[740px] bg-g-30 py-8 sm:-mt-20 sm:px-4 sm:py-8 md:-mt-32 md:px-8 md:py-16;
+
+    .static-header-inner {
+      @apply border-l-[6px] border-o-40 pl-4 sm:border-l-[8px] sm:pb-0 sm:pl-8;
+      .heading {
+        @apply font-bold;
+      }
+
+      .sub-heading {
+        @apply sm:pt-4;
+      }
+    }
+  }
+}
+
+.core-value-title {
+  @apply relative;
+
+  &:after {
+    content: '';
+    @apply absolute -bottom-1 left-1/2 h-[2px] w-1/2 -translate-x-1/2 bg-o-60;
+  }
+}

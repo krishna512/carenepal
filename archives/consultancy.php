@@ -1,0 +1,1 @@
+<?php include(locate_template('archives/vacancy.php', false, false)); ?>

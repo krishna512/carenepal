@@ -1,0 +1,50 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+// @layer base {
+:root {
+  --color-default-text: #1c1d30;
+  //Orange
+  --o-10: #eb9b62;
+  --o-20: #e98c4b;
+  --o-30: #e67e35;
+  --o-40: #e36f1e; //  orange primary color
+  --o-50: #ce641a;
+  // 50: f4b223;
+
+  //neutral
+  --n-0: #fff;
+  --n-10: #f9f6f4; //Light Cream
+  --n-20: #eee9e5; //Cream
+  --n-30: #b0b3b2; //PMS421
+  --n-40: #5a5b5d; //PMS425
+  --n-50: #090015; //Neutral Black
+  --n-60: #1c1d30; //indigo
+  --n-70: #0e0e14;
+
+  //Yellow
+  --y-10: #fffef5;
+  --y-20: #fff8b1;
+  --y-30: #fae261;
+  --y-40: #fbce39;
+  --y-50: #f4b223; // Yellow primary color
+
+  //accent
+
+  --PMS-185: #e91d2d;
+  --PMS-389: #cadb2b;
+  --PMS-2573: #b784ba;
+  --PMS-2925: #0199d6;
+  --PMS-187: #aa182c;
+  --PMS-575: #68813c;
+  --PMS-2607: #510c76;
+  --PMS-301: #004987;
+
+  // Very dark grayish blue.
+  --g-40: '#BOB3B2';
+  --g-50: #5a5b5d;
+}
+// }

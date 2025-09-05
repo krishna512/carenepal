@@ -1,0 +1,108 @@
+// media  for header
+@media (max-width: 960px) {
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+
+    position: relative;
+    z-index: auto;
+    background: inherit;
+  }
+
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: block;
+    color: #fff;
+  }
+
+  .main-header.scrolled .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    color: #090015;
+  }
+
+  .main-header .main-navigation-items .safe-svg-cover {
+    display: none;
+  }
+}
+
+.wp-block-navigation__responsive-container-close {
+  color: #fff;
+}
+
+.wp-block-navigation__responsive-container-close svg,
+.wp-block-navigation__responsive-container-open svg {
+  width: 32px;
+  height: 32px;
+}
+//
+
+// For nav responsive hamburger-menu
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+  background-color: var(--n-60);
+  padding: 20px;
+  .wp-block-navigation__responsive-container-content {
+    flex-direction: column-reverse;
+  }
+  ul.wp-block-navigation__container {
+    width: 100%;
+    gap: 0;
+    color: #fff !important ;
+
+    .wp-block-navigation-item.has-child {
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--n-20);
+      }
+      align-items: start;
+      width: 100%;
+      & > a {
+        font-weight: 500;
+        padding-block: 14px;
+        font-size: 16px;
+      }
+
+      & > .wp-block-navigation__submenu-container {
+        display: none;
+        padding: 0;
+
+        .wp-block-navigation-item {
+          align-items: flex-start;
+          margin-bottom: 8px;
+
+          &.has-child {
+            border-bottom: none;
+            & > a {
+              font-size: 14px;
+              padding: 0;
+            }
+
+            & > .wp-block-navigation__submenu-container {
+              padding-left: 10px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  ul.wp-block-navigation__container > .wp-block-navigation-item.has-child {
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0.25rem;
+      width: 8px;
+      height: 8px;
+      top: 25px;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-radius: 1px 0;
+      transform: rotate(45deg);
+      transition: 0.2s ease;
+      transition-duration: 0.3s;
+    }
+
+    &.active::after {
+      transform: rotate(-135deg);
+    }
+  }
+
+  form.wp-block-search {
+    display: block;
+  }
+}

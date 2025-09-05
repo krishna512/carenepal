@@ -1,0 +1,39 @@
+.pagination {
+  .nav-links {
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    margin-bottom: 96px;
+  }
+
+  .page-numbers {
+    padding: 4px 12px;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 4px;
+    @media only screen and (max-width: 767px) {
+      padding: 0px 5px;
+    }
+    @apply border-n-20;
+
+    &.current {
+      font-weight: 700;
+      @apply border-o-50 bg-o-50 text-n-0;
+    }
+
+    &:not(.current):hover {
+      @apply border-n-20 bg-g-10 text-g-20;
+    }
+
+    &.next,
+    &.prev {
+      display: flex;
+      align-items: center;
+      border: none;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+ul,
+ol {
+  box-sizing: border-box;
+  list-style-type: revert;
+}
+
+a {
+  @apply hover:no-underline;
+}
+
+input:focus-visible {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  height: 1em;
+}
+
+a:where(:not(.wp-element-button)):active {
+  color: inherit;
+}
+
+body#tinymce {
+  margin: 9px 10px;
+}
+
+.mce-content-body {
+  blockquote,
+  dd,
+  dl,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  p,
+  pre {
+    margin: revert;
+  }
+
+  > *:last-child {
+    margin: 0;
+  }
+
+  a {
+    @apply text-o-40 underline;
+
+    &:hover {
+      @apply text-y-50;
+    }
+  }
+}
+
+.frm_forms {
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+.wp-block-post-content {
+  ul,
+  ol {
+    padding-left: 18px;
+  }
+  li {
+    list-style: revert;
+  }
+}
